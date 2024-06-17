@@ -1,0 +1,18 @@
+version: '3'
+services:
+  db01:
+    image: mariadb
+    volumes:
+      - c:/dockerrepos/mariadb/disco:/var/lib/mysql
+      - c:/ffd:/var/outrapasta
+    environment:
+      MYSQL_ROOT_PASSWORD: Abcd1234
+    ports:
+      - "3306:3306"
+  web01:
+    image: httpd
+    volumes:
+      - c:\uma pasta vossa :/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
